@@ -2,28 +2,28 @@
 class Topiq < Formula
   desc "Peek, filter, replay. Kafka without leaving the terminal"
   homepage "https://candril.github.io/topiq/"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/candril/topiq/releases/download/v0.1.0/topiq-darwin-arm64.gz"
-      sha256 "b3a7d32f8227096233631271df6a05ab3ab27f8639e122f2f6a0abacc1e813f7"
+      url "https://github.com/candril/topiq/releases/download/v0.1.1/topiq-darwin-arm64.gz"
+      sha256 "b2515b7a3312c5c91f7f341b75796a9b578574523b07b9bb6ed3bf2264324963"
     end
     on_intel do
-      url "https://github.com/candril/topiq/releases/download/v0.1.0/topiq-darwin-x64.gz"
-      sha256 "4f01492c495e0e32e2fc1bc34a1a14582a0bb1e50f0a043184775fb3c9f5569b"
+      url "https://github.com/candril/topiq/releases/download/v0.1.1/topiq-darwin-x64.gz"
+      sha256 "4b798c46203118e30a5711a57badcffa09fe33e0674e84ea4eea1bbeecf16375"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/candril/topiq/releases/download/v0.1.0/topiq-linux-arm64.gz"
-      sha256 "6090eac2184990a3840851cda4a3581e50da8440bea165c5b308b8168f114662"
+      url "https://github.com/candril/topiq/releases/download/v0.1.1/topiq-linux-arm64.gz"
+      sha256 "547a2d3397b65081b4ecf93c23f516d32524c3afae065e09ee71d208bb5d17a8"
     end
     on_intel do
-      url "https://github.com/candril/topiq/releases/download/v0.1.0/topiq-linux-x64.gz"
-      sha256 "b7226fd6fca396f22a6fe9bc0ecd015e42e6ff91493b1b77be0d227fc74b6599"
+      url "https://github.com/candril/topiq/releases/download/v0.1.1/topiq-linux-x64.gz"
+      sha256 "520ab8668aa38320f6264b09982b8bd9ae8ffdc1aad6bb9ea8b202b774e1c87d"
     end
   end
 
