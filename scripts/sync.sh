@@ -27,11 +27,14 @@ seed=(
 
 stamp() {
   local tool="$1" src="$2" dest="$3"
-  local upper entry
+  local upper entry desc runtime
   upper=$(tr '[:lower:]' '[:upper:]' <<<"$tool")
   entry=$(jq -r ".${tool}.entry" tools.json)
+  desc=$(jq -r ".${tool}.desc" tools.json)
+  runtime=$(jq -r ".${tool}.nix_runtime | map(\"\\\"\" + . + \"\\\"\") | join(\" \")" tools.json)
   mkdir -p "$(dirname "$dest")"
   sed -e "s|{{tool}}|${tool}|g" -e "s|{{TOOL}}|${upper}|g" -e "s|{{entry}}|${entry}|g" \
+    -e "s|{{desc}}|${desc}|g" -e "s|{{nix_runtime}}|${runtime}|g" \
     "templates/${src}" > "$dest"
   [ "${src##*.}" = "sh" ] && chmod +x "$dest"
   echo "  ${dest#../}"

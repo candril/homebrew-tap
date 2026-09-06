@@ -30,15 +30,16 @@ Swap `presto` for `lane`, `monq`, `riff` or `topiq`.
    workflow has a `TAP_TOKEN` to nudge it with) and runs [`scripts/update.sh`](scripts/update.sh):
    for each tool it reads the latest release, writes `releases/<tool>.json` (version + four
    checksums) and renders `Formula/<tool>.rb` from it.
-3. [`flake.nix`](flake.nix) reads the same JSON at evaluation time, so Nix needs no edit at all.
-   Each tool repo carries a thin `flake.nix` that re-exports its package from here, with no lock
-   file, so `nix run github:candril/<tool>` always resolves the latest release.
+3. The same workflow commits a `release.json` (version + four checksums) to the tool's own
+   `main`, which its `flake.nix` reads — so `nix run github:candril/<tool>` is the new release
+   the moment the workflow finishes. [`flake.nix`](flake.nix) here does the same for all five
+   from `releases/`, for `nix run github:candril/homebrew-tap#<tool>`.
 
 ## Templates
 
 [`templates/`](templates/) holds the files that are the same in every tool repo except for the
 tool's name: the installer, the build script, the release and site workflows, the docs-site
-footer that links the siblings, the thin flake, and the version module. `scripts/sync.sh`
+footer that links the siblings, the flake, and the version module. `scripts/sync.sh`
 stamps the name in and copies them into `../<tool>`; a diff in a tool repo after running it is
 drift.
 
