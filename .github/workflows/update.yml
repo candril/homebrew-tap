@@ -1,0 +1,44 @@
+name: 🔄 Update from releases
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+    inputs:
+      tool:
+        description: "One tool to refresh (empty: all)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Regenerate releases/ and Formula/
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash scripts/update.sh ${{ inputs.tool }}
+
+      - name: Commit if anything changed
+        run: |
+          if git diff --quiet; then
+            echo "up to date"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add releases Formula
+          summary=$(git diff --cached --name-only releases | sed -E 's|releases/(.*)\.json|\1|' | while read -r t; do
+            printf '%s %s ' "$t" "$(jq -r .version "releases/$t.json")"
+          done)
+          git commit -m "release: ${summary}"
+          git push

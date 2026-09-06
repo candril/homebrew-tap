@@ -1,0 +1,37 @@
+{
+  "lane": {
+    "desc": "Terminal Kanban board for Jira",
+    "homepage": "https://candril.github.io/lane/",
+    "entry": "./src/index.tsx",
+    "brew_deps": [],
+    "nix_runtime": []
+  },
+  "monq": {
+    "desc": "Browse, query, edit. MongoDB without leaving the terminal",
+    "homepage": "https://candril.github.io/monq/",
+    "entry": "./src/index.tsx",
+    "brew_deps": [],
+    "nix_runtime": []
+  },
+  "presto": {
+    "desc": "Pull requests in the terminal: every repo you watch, one list, whose move it is",
+    "homepage": "https://candril.github.io/presto/",
+    "entry": "./src/index.tsx",
+    "brew_deps": ["gh"],
+    "nix_runtime": ["gh", "git"]
+  },
+  "riff": {
+    "desc": "Code review in the terminal: PRs, branches and working-copy diffs with vim motions",
+    "homepage": "https://candril.github.io/riff/",
+    "entry": "./src/index.ts",
+    "brew_deps": ["gh"],
+    "nix_runtime": ["gh", "git"]
+  },
+  "topiq": {
+    "desc": "Peek, filter, replay. Kafka without leaving the terminal",
+    "homepage": "https://candril.github.io/topiq/",
+    "entry": "./src/index.tsx",
+    "brew_deps": [],
+    "nix_runtime": []
+  }
+}
