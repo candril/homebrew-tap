@@ -7,8 +7,8 @@
     ":rebaseStalePrs"
   ],
   "timezone": "Europe/Zurich",
-  "schedule": ["before 6am on monday"],
   "prConcurrentLimit": 4,
+  "prHourlyLimit": 2,
   "labels": ["dependencies"],
   "ignorePaths": [
     "**/node_modules/**",
@@ -16,6 +16,7 @@
     ".github/workflows/deploy-site.yml"
   ],
   "lockFileMaintenance": {
+    "description": "Refresh the transitive tree in bun.lock once a month. This is the only thing on a schedule: with a handful of direct dependencies per repo, grouping and the PR limits keep the noise down better than a weekly window would, and a weekly window means a fresh install sees nothing until Monday.",
     "enabled": true,
     "schedule": ["before 6am on the first day of the month"]
   },
