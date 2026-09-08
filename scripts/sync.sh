@@ -17,6 +17,7 @@ files=(
   "build.ts:scripts/build.ts"
   "release.yml:.github/workflows/release.yml"
   "deploy-site.yml:.github/workflows/deploy-site.yml"
+  "site-ci.yml:.github/workflows/site-ci.yml"
   "Footer.astro:site/src/components/Footer.astro"
   "flake.nix:flake.nix"
   "renovate.json:renovate.json"
