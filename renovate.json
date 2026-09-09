@@ -2,6 +2,10 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "This repo's own config: the shared preset, plus the templates/ directory. Action versions in templates/release.yml and templates/deploy-site.yml are updated here and reach the five tool repos through scripts/sync.sh, which is why the tool repos ignore those two files.",
   "extends": ["github>candril/homebrew-tap"],
+  "homebrew": {
+    "description": "Formula/*.rb carry the version and four checksums of each release, written by scripts/update.sh from the release's own SHA256SUMS. That script is the single source of truth; a second writer would fight it.",
+    "enabled": false
+  },
   "github-actions": {
     "managerFilePatterns": [
       "/^templates/[^/]+\\.ya?ml$/",
