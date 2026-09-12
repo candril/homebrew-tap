@@ -4,34 +4,49 @@
     "homepage": "https://candril.github.io/lane/",
     "entry": "./src/index.tsx",
     "brew_deps": [],
-    "nix_runtime": []
+    "nix_runtime": [],
+    "bun_floor": "1.3.0"
   },
   "monq": {
     "desc": "Browse, query, edit. MongoDB without leaving the terminal",
     "homepage": "https://candril.github.io/monq/",
     "entry": "./src/index.tsx",
     "brew_deps": [],
-    "nix_runtime": []
+    "nix_runtime": [],
+    "bun_floor": "1.4.0"
   },
   "presto": {
     "desc": "Pull requests in the terminal: every repo you watch, one list, whose move it is",
     "homepage": "https://candril.github.io/presto/",
     "entry": "./src/index.tsx",
-    "brew_deps": ["gh"],
-    "nix_runtime": ["gh", "git"]
+    "brew_deps": [
+      "gh"
+    ],
+    "nix_runtime": [
+      "gh",
+      "git"
+    ],
+    "bun_floor": "1.3.0"
   },
   "riff": {
     "desc": "Code review in the terminal: PRs, branches and working-copy diffs with vim motions",
     "homepage": "https://candril.github.io/riff/",
     "entry": "./src/index.ts",
-    "brew_deps": ["gh"],
-    "nix_runtime": ["gh", "git"]
+    "brew_deps": [
+      "gh"
+    ],
+    "nix_runtime": [
+      "gh",
+      "git"
+    ],
+    "bun_floor": "1.3.0"
   },
   "topiq": {
     "desc": "Peek, filter, replay. Kafka without leaving the terminal",
     "homepage": "https://candril.github.io/topiq/",
     "entry": "./src/index.tsx",
     "brew_deps": [],
-    "nix_runtime": []
+    "nix_runtime": [],
+    "bun_floor": "1.3.0"
   }
 }
