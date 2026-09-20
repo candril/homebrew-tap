@@ -20,7 +20,6 @@ files=(
   "site-ci.yml:.github/workflows/site-ci.yml"
   "Footer.astro:site/src/components/Footer.astro"
   "flake.nix:flake.nix"
-  "renovate.json:renovate.json"
 )
 # written only when the tool has none yet: the file is the tool's, not the template's
 seed=(
