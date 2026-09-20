@@ -1,0 +1,16 @@
+{
+    "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+    "name": "candril",
+    "description": "Claude Code plugins for the candril terminal tools and the repo that distributes them",
+    "owner": {
+        "name": "candril",
+        "url": "https://github.com/candril/homebrew-tap"
+    },
+    "plugins": [
+        {
+            "name": "fleet",
+            "source": "./plugins/fleet",
+            "description": "Dependency updates across lane, monq, presto, riff and topiq — surveyed as one fleet, read once per package, verified per repo."
+        }
+    ]
+}

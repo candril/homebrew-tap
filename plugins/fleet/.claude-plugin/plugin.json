@@ -1,0 +1,18 @@
+{
+    "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+    "name": "fleet",
+    "version": "0.1.0",
+    "description": "Dependency updates across the five candril terminal tools — surveyed as one fleet, read once per package, verified per repo.",
+    "author": {
+        "name": "candril",
+        "url": "https://github.com/candril/homebrew-tap"
+    },
+    "homepage": "https://github.com/candril/homebrew-tap",
+    "keywords": [
+        "dependencies",
+        "bun",
+        "opentui",
+        "monorepo",
+        "candril"
+    ]
+}

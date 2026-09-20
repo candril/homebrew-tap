@@ -51,3 +51,20 @@ scripts/update.sh            # refresh releases/ and Formula/ from GitHub, local
 
 `tools.json` is the registry: description, homepage, entry file, Homebrew dependencies and the
 runtime tools Nix wraps onto the binary's `PATH`.
+
+## Dependencies
+
+There is no Renovate. The `fleet` plugin here carries the `fleet-deps` skill, which treats the
+five repos as one fleet: it surveys `bun outdated` across every checkout *and* puts the declared
+ranges side by side, so a tool sitting on an older line than its siblings shows up even though
+npm has nothing newer to offer it. A bump is then one package moving in up to five repos — its
+changelog read once, the gate (`just typecheck`, `just test`, `just build`, plus a tmux smoke
+launch) run per repo.
+
+```sh
+claude plugin marketplace add candril/homebrew-tap
+claude plugin install fleet@candril
+```
+
+Then `/fleet-deps` from any of the five checkouts. It lands local jj changes and stops; pushing
+stays manual.
