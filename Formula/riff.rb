@@ -2,28 +2,28 @@
 class Riff < Formula
   desc "Code review in the terminal: PRs, branches and working-copy diffs with vim motions"
   homepage "https://candril.github.io/riff/"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/candril/riff/releases/download/v0.2.0/riff-darwin-arm64.gz"
-      sha256 "907fa02c0122a5b99054c7b390d9287680656c2e0c49491927c04e0723b0c857"
+      url "https://github.com/candril/riff/releases/download/v0.3.0/riff-darwin-arm64.gz"
+      sha256 "dafa14d045be0d1d59db42cc3e00293d7f6c60f3a08e3529f553d35f6ec4c4f8"
     end
     on_intel do
-      url "https://github.com/candril/riff/releases/download/v0.2.0/riff-darwin-x64.gz"
-      sha256 "6cd8bdd5e0e5f70f5133c712a044984c32c4d8deec1dd88426edc55f2a954121"
+      url "https://github.com/candril/riff/releases/download/v0.3.0/riff-darwin-x64.gz"
+      sha256 "1fc3a1b92382ab0cb53b0a8c512936b8f4ff206b21448c4d6e594adf1899bce4"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/candril/riff/releases/download/v0.2.0/riff-linux-arm64.gz"
-      sha256 "4f4402802bdc6e9a7964e521e6f3483d4ae456c171fe6370d3b0d584aa10ec17"
+      url "https://github.com/candril/riff/releases/download/v0.3.0/riff-linux-arm64.gz"
+      sha256 "4f59ce944a9074b365a928cbc033a79bc49470ddb1e50ca0f3a84bf81bbe2571"
     end
     on_intel do
-      url "https://github.com/candril/riff/releases/download/v0.2.0/riff-linux-x64.gz"
-      sha256 "ba6bc0dfcf2c2d12f5351f56778b67b347c7384166f9bab5fc793d345d5f832d"
+      url "https://github.com/candril/riff/releases/download/v0.3.0/riff-linux-x64.gz"
+      sha256 "92b614fd320bb238a927b86cee0487f0381bf028476f76e1ebec987e944f56f1"
     end
   end
 

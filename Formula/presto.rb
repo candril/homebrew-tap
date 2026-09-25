@@ -2,28 +2,28 @@
 class Presto < Formula
   desc "Pull requests in the terminal: every repo you watch, one list, whose move it is"
   homepage "https://candril.github.io/presto/"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/candril/presto/releases/download/v0.2.0/presto-darwin-arm64.gz"
-      sha256 "db160829b3197eee8f9ac42e1ee85eded6370f2c0a47be1b63b2811b5cc22631"
+      url "https://github.com/candril/presto/releases/download/v0.3.0/presto-darwin-arm64.gz"
+      sha256 "ea3a2eba1e05727b09e13b198b5fe49c04fd64dd0f99f12330b5c4f1f5362b54"
     end
     on_intel do
-      url "https://github.com/candril/presto/releases/download/v0.2.0/presto-darwin-x64.gz"
-      sha256 "f675bc5c72f614d168a692d5e59e11a7b7855ed2c34961de57c154b05cb35d58"
+      url "https://github.com/candril/presto/releases/download/v0.3.0/presto-darwin-x64.gz"
+      sha256 "48b6bcf43073bae75736de3aa92983396d9139f06f05c2bb5a37e4785c3afc34"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/candril/presto/releases/download/v0.2.0/presto-linux-arm64.gz"
-      sha256 "56e7a4052ca7ce56533967ffdac16f32f33e7327bc20b2f8dfe5e4bfaaa97a12"
+      url "https://github.com/candril/presto/releases/download/v0.3.0/presto-linux-arm64.gz"
+      sha256 "a25852d2c3d6e6daefc06599db9bc9f2e5c99e91b0163e3c7fe47d5c3e09877e"
     end
     on_intel do
-      url "https://github.com/candril/presto/releases/download/v0.2.0/presto-linux-x64.gz"
-      sha256 "60585c54cbd339a7863f90ed1038c63b35938c0768608068cb17acd66093ef94"
+      url "https://github.com/candril/presto/releases/download/v0.3.0/presto-linux-x64.gz"
+      sha256 "9ce269d56183a382dab0f5f833aba52526e03d946c6a73ceb9b4448e958d0124"
     end
   end
 

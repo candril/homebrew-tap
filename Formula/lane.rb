@@ -2,28 +2,28 @@
 class Lane < Formula
   desc "Terminal Kanban board for Jira"
   homepage "https://candril.github.io/lane/"
-  version "0.4.0"
+  version "0.4.1"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/candril/lane/releases/download/v0.4.0/lane-darwin-arm64.gz"
-      sha256 "077e2734758fe0442cbb489a092a458d28e1c2eb4f359b09338d4006bf1602ac"
+      url "https://github.com/candril/lane/releases/download/v0.4.1/lane-darwin-arm64.gz"
+      sha256 "bdd4e5b41bc75ba7fe9dcd50ca18e6b1b4e793ce803d13e097461007f53ddb97"
     end
     on_intel do
-      url "https://github.com/candril/lane/releases/download/v0.4.0/lane-darwin-x64.gz"
-      sha256 "1cca0c32beb7c99bd18066c9279f739ae85fb20e2fe5132d52e0a617e1a7ea76"
+      url "https://github.com/candril/lane/releases/download/v0.4.1/lane-darwin-x64.gz"
+      sha256 "c043c7c6fd3b6327b8c02e2506076dac15e2851737874dff225babd3be8f7f07"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/candril/lane/releases/download/v0.4.0/lane-linux-arm64.gz"
-      sha256 "1486360bef2e9ccf1d120ef826aca122d59db9002748678e9ac04c39305231d2"
+      url "https://github.com/candril/lane/releases/download/v0.4.1/lane-linux-arm64.gz"
+      sha256 "018506c232729f22f6c020759eb64e68642f25818ea6a468743ade9a2c6064ef"
     end
     on_intel do
-      url "https://github.com/candril/lane/releases/download/v0.4.0/lane-linux-x64.gz"
-      sha256 "046c985ce3c8171841c1b1e4f5f87ea88ab17eef0ec3c11672810c58a9dff47a"
+      url "https://github.com/candril/lane/releases/download/v0.4.1/lane-linux-x64.gz"
+      sha256 "d0bc4e6a0c2a002d60e35d498e04274fc21a166396b86800e15b8aa44a508e5c"
     end
   end
 
