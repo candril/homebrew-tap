@@ -2,28 +2,28 @@
 class Monq < Formula
   desc "Browse, query, edit. MongoDB without leaving the terminal"
   homepage "https://candril.github.io/monq/"
-  version "0.8.1"
+  version "0.9.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/candril/monq/releases/download/v0.8.1/monq-darwin-arm64.gz"
-      sha256 "9ec76de653b65993e23404135043b043f2685fe2751c5a9ae48eed086498b8f1"
+      url "https://github.com/candril/monq/releases/download/v0.9.0/monq-darwin-arm64.gz"
+      sha256 "9e89221e82c3a12a370c7ec0420d99ad089521e2efac13f87aa64bc9005323ad"
     end
     on_intel do
-      url "https://github.com/candril/monq/releases/download/v0.8.1/monq-darwin-x64.gz"
-      sha256 "62174c1ccfd7eef6f1676e6197acaa6da786e50fe0a25a3178bb8f4e362b893d"
+      url "https://github.com/candril/monq/releases/download/v0.9.0/monq-darwin-x64.gz"
+      sha256 "b867ad13d1f7eac5cd0b09e0797872ff00025aed2b88219d9aea04f75d25c44c"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/candril/monq/releases/download/v0.8.1/monq-linux-arm64.gz"
-      sha256 "1427c1eddb388093c5a0d439b45d4629d3cc7cf080dd9f596575cfec2f366ca3"
+      url "https://github.com/candril/monq/releases/download/v0.9.0/monq-linux-arm64.gz"
+      sha256 "fd275546512d9fa3cb206d9de9d596d0ceffc0c23d40eff4a153f3b0960adc23"
     end
     on_intel do
-      url "https://github.com/candril/monq/releases/download/v0.8.1/monq-linux-x64.gz"
-      sha256 "212e072573e3d137e5c86938a4c441dc91744c1665e2cf8ba97286587468c54e"
+      url "https://github.com/candril/monq/releases/download/v0.9.0/monq-linux-x64.gz"
+      sha256 "b570b9a13519dae7027746ba88e5d1242bbece7dadf976d80fdc4618132a67b3"
     end
   end
 
